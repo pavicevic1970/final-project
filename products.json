@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Netflix Premium",
+      "image": "/images/netflix-card2.png",
+      "price": "$15.99",
+      "description": "Watch unlimited TV shows, movies, and more. Enjoy ad-free streaming with ultra HD available."
+    },
+    {
+      "title": "Spotify Premium",
+      "image": "/images/shopify-card.png",
+      "price": "$9.99",
+      "description": "Listen to millions of songs without ads. Download music for offline listening and enjoy high-quality audio."
+    },
+    {
+        "title": "Discord Nitro",
+        "image": "/images/discord-card.png",
+        "price": "$9.99",
+        "description": "Enhance your Discord experience with custom emojis, animated avatars, server boosts, and more."
+    },
+    {
+      "title": "Amazon Prime Video",
+      "image": "/images/amazon-card.png",
+      "price": "$12.99/month",
+      "description": "Access thousands of popular movies and TV shows. Enjoy exclusive Amazon Originals and more."
+    },
+    {
+      "title": "HBO Max",
+      "image": "/images/hbo-card.png",
+      "price": "$14.99/month",
+      "description": "Stream all of HBO plus exclusive Max Originals, blockbuster movies, and more."
+    },
+    {
+      "title": "Crunchyroll Premium",
+      "image": "/images/crunchyroll-card.png",
+      "price": "$7.99/month",
+      "description": "Watch anime, manga, and Asian dramas. Enjoy simulcasts directly from Japan and ad-free streaming."
+    },
+    {
+      "title": "NordVPN",
+      "image": "/images/nord-card.png",
+      "price": "$9.99/month",
+      "description": "Secure your internet connection and protect your privacy. Access content securely from anywhere."
+    },
+    {
+      "title": "UFC Fight Pass",
+      "image": "/images/ufc-card.png",
+      "price": "$9.99/month",
+      "description": "Stream live UFC events, watch exclusive fights, and access a library of past fights and original shows."
+    }
+  ]
+  

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Styles for tabs */
+
+      .tab.active {
+        border-bottom: #858584 2px solid;
+        padding-bottom: 4px;
+        color: #fff;
+      }
+
+      /* Styles for items */
+      .item {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#2B2B2B] text-white">
+    <header>
+      <nav class="bg-white border-gray-200 dark:bg-[#2B2B2B]">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="images/logo.png" class="h-8" alt="Flowbite Logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >PVL Account Shop</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#2B2B2B] md:dark:bg-[#2B2B2B] dark:border-gray-700 items-center"
+            >
+              <li>
+                <a
+                  href="marketplace.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Marketplace</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about-us.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/checkout.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Cart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/login.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  <button
+                    class="bg-gradient-to-r from-[#A259FF] to-[#FF6250] hover:from-pink-500 hover:to-orange-500 text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center gap-2"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10 3.125C7.58375 3.125 5.625 5.08375 5.625 7.5C5.625 9.91625 7.58375 11.875 10 11.875C12.4162 11.875 14.375 9.91625 14.375 7.5C14.375 5.08375 12.4162 3.125 10 3.125ZM4.375 7.5C4.375 4.3934 6.8934 1.875 10 1.875C13.1066 1.875 15.625 4.3934 15.625 7.5C15.625 10.6066 13.1066 13.125 10 13.125C6.8934 13.125 4.375 10.6066 4.375 7.5Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.99998 13.1244C8.57362 13.1244 7.17239 13.4999 5.93716 14.2131C4.70193 14.9264 3.67622 15.9522 2.96315 17.1875C2.79059 17.4865 2.40836 17.5889 2.10941 17.4164C1.81046 17.2438 1.708 16.8616 1.88056 16.5626C2.70333 15.1373 3.88684 13.9536 5.31211 13.1306C6.73738 12.3077 8.35418 11.8744 9.99998 11.8744C11.6458 11.8744 13.2626 12.3077 14.6879 13.1306C16.1131 13.9536 17.2966 15.1373 18.1194 16.5626C18.292 16.8616 18.1895 17.2438 17.8906 17.4164C17.5916 17.5889 17.2094 17.4865 17.0368 17.1875C16.3237 15.9522 15.298 14.9264 14.0628 14.2131C12.8276 13.4999 11.4263 13.1244 9.99998 13.1244Z"
+                        fill="white"
+                      />
+                    </svg>
+                    Log in
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="sm:px-40 px-5 py-5 mx-auto">
+      <div id="top-search" class="flex flex-col gap-4">
+        <h2 class="text-5xl font-semibold">Proceed to Checkout</h2>
+        <p class="text-xl">
+          Secure checkout sample text - all transactions are processed safely
+          and encrypted etc
+        </p>
+      </div>
+
+      <div id="top-tabs" class="py-20">
+        <div id="tabs" class="flex w-full justify-center pb-5">
+          <!-- <div class="tab active w-1/2 text-center" data-filter="all">Account Types</div>
+                <div class="tab w-1/2 text-center" data-filter="collection">Collection</div> -->
+        </div>
+
+        <div
+          id="items"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center"
+        >
+          <!-- Your product items here -->
+        </div>
+
+        <div class="flex justify-center mt-20">
+          <button
+            id="loadMoreBtn"
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Load More
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="checkout"
+        class="flex flex-wrap-reverse border-[#7B61FF] py-4 border-dashed border-2 rounded-[26.24px]"
+        style="
+          background-image: linear-gradient(
+            to bottom,
+            rgba(123, 97, 255, 0.2),
+            rgba(255, 255, 255, 0)
+          );
+        "
+      >
+        <form
+          action=""
+          class="lg:w-2/3 w-full flex flex-col gap-4 items-center justify-center"
+        >
+          <div id="price" class="flex items-center">
+            <h3 class="sm:text-[52px] text-xl font-semibold">10.00 $</h3>
+            <svg
+              width="28"
+              height="27"
+              viewBox="0 0 28 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.40039 10.28L13.9604 16.84L20.5204 10.28"
+                stroke="#F9F9F9"
+                stroke-width="3.28"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="sm:text-lg text-[7px] font-normal">Pay by bank card</p>
+          <div class="input">
+            <svg
+              width="47"
+              height="33"
+              viewBox="0 0 47 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_446_5549)">
+                <rect
+                  x="0.720703"
+                  y="0.0800171"
+                  width="45.92"
+                  height="32.8"
+                  rx="4.92"
+                  fill="#CCCCCC"
+                />
+                <rect
+                  x="0.720703"
+                  y="6.64001"
+                  width="45.92"
+                  height="6.56"
+                  fill="#B3B3B3"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_446_5549">
+                  <rect
+                    x="0.720703"
+                    y="0.0800171"
+                    width="45.92"
+                    height="32.8"
+                    rx="4.92"
+                    fill="white"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <input type="text" placeholder="Card number" />
+          </div>
+          <div class="input">
+            <svg
+              width="47"
+              height="33"
+              viewBox="0 0 47 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_446_5549)">
+                <rect
+                  x="0.720703"
+                  y="0.0800171"
+                  width="45.92"
+                  height="32.8"
+                  rx="4.92"
+                  fill="#CCCCCC"
+                />
+                <rect
+                  x="0.720703"
+                  y="6.64001"
+                  width="45.92"
+                  height="6.56"
+                  fill="#B3B3B3"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_446_5549">
+                  <rect
+                    x="0.720703"
+                    y="0.0800171"
+                    width="45.92"
+                    height="32.8"
+                    rx="4.92"
+                    fill="white"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <input type="text" placeholder="Email address" />
+          </div>
+
+          <hr class="text-white w-3/4" />
+
+          <p class="sm:text-lg text-[7px] font-normal">Other Payment Methods</p>
+
+          <div
+            id="methods"
+            class="w-full sm:flex-nowrap flex-wrap flex justify-center gap-2"
+          >
+            <button
+              class="bg-black rounded-[9.84px] w-[127px] h-11 sm:h-[65px]"
+            >
+              <svg
+                class="mx-auto w-1/2 sm:w-full"
+                width="73"
+                height="30"
+                viewBox="0 0 73 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M60.0583 29.8623C63.3722 29.8623 64.932 28.5978 66.2944 24.7649L72.263 8.02417H68.8073L64.8048 20.9759H64.7346L60.7322 8.04172H57.1785L62.9366 23.9755L62.6282 24.9447C62.4103 26.332 61.1649 27.3216 59.763 27.2193C59.4955 27.2193 58.9765 27.1915 58.766 27.1638V29.795C59.1943 29.8535 59.627 29.8813 60.0583 29.8798V29.8623ZM48.5421 21.4787C46.7294 21.4787 45.579 20.6017 45.579 19.2743C45.579 17.8988 46.6885 17.0977 48.8096 16.9705L52.5869 16.7322V17.9689C52.5036 20.0067 50.783 21.5928 48.7453 21.5094C48.6766 21.5065 48.6093 21.5007 48.5421 21.4948V21.4787ZM47.6299 24.0764C49.6867 24.1319 51.6104 23.0604 52.6439 21.2814H52.7141V23.9127H55.8599V13.0148C55.8599 9.85437 53.3325 7.81806 49.4411 7.81806C45.8319 7.81806 43.1626 9.88214 43.0646 12.7195H46.1272C46.4926 11.2767 47.8638 10.3251 49.3431 10.4859C51.4219 10.4859 52.5869 11.4551 52.5869 13.2385V14.4459L48.3477 14.6988C44.4007 14.9371 42.2665 16.5524 42.2665 19.362C42.2636 22.2111 44.468 24.0925 47.6284 24.0925L47.6299 24.0764ZM29.3996 4.87834H33.3172C36.2672 4.87834 37.9527 6.45126 37.9527 9.21848C37.9527 11.9857 36.2672 13.5718 33.3041 13.5718H29.3996V4.87834ZM26.0008 2.01318V23.9083H29.3996V16.4442H34.1052C37.938 16.6504 41.2111 13.7106 41.4172 9.87776C41.4289 9.65995 41.4303 9.4436 41.4216 9.22579C41.6028 5.43529 38.6777 2.21637 34.8872 2.03364C34.6636 2.02341 34.4414 2.02487 34.2177 2.03511L26.0008 2.01318ZM14.72 6.09896C12.767 5.9864 11.0961 7.20848 10.1694 7.20848C9.24256 7.20848 7.80997 6.15597 6.26483 6.18521C4.21829 6.23783 2.353 7.37074 1.36335 9.16293C-0.743126 12.7868 0.815174 18.1516 2.85149 21.1001C3.84845 22.5619 5.04422 24.1626 6.61567 24.1056C8.1038 24.0501 8.69437 23.1364 10.4924 23.1364C12.2904 23.1364 12.824 24.1056 14.3969 24.0764C16.0254 24.0486 17.0516 22.6146 18.0515 21.1528C18.7561 20.1178 19.3042 18.9849 19.6799 17.7906C17.7606 16.9515 16.5166 15.0614 16.5063 12.9666C16.5356 11.1188 17.5033 9.41436 19.0762 8.44518C18.0734 7.02137 16.4639 6.1472 14.7229 6.0858L14.72 6.09896ZM13.5008 4.16497C12.6457 5.24233 11.3373 5.86068 9.96177 5.83583C9.87406 4.49388 10.3301 3.17386 11.2262 2.17106C12.118 1.13609 13.3751 0.487041 14.7346 0.359863C14.8311 1.73982 14.3882 3.10223 13.4979 4.16059"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-[#6461FC] rounded-[9.84px] w-[127px] h-11 sm:h-[65px]"
+            >
+              <svg
+                class="mx-auto w-1/2 sm:w-full"
+                width="72"
+                height="30"
+                viewBox="0 0 72 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M38.902 4.36023L33.9435 5.42437V1.40429L38.902 0.359863V4.36023ZM49.2137 6.58694C47.2777 6.58694 46.0332 7.49343 45.3418 8.12403L45.085 6.90224H40.7389V29.8798L45.6776 28.8353L45.6973 23.2585C46.4085 23.7708 47.4555 24.5 49.1939 24.5C52.73 24.5 55.95 21.6623 55.95 15.4154C55.9302 9.70053 52.6707 6.58694 49.2137 6.58694ZM48.0287 20.1645C46.8632 20.1645 46.1718 19.7506 45.6977 19.2383L45.6779 11.9273C46.1915 11.3558 46.9027 10.9617 48.0287 10.9617C49.8264 10.9617 51.0709 12.9717 51.0709 15.5532C51.0709 18.1939 49.8461 20.1645 48.0287 20.1645ZM71.5168 15.6125C71.5168 10.5677 69.0672 6.587 64.3854 6.587C59.6838 6.587 56.8391 10.5677 56.8391 15.5731C56.8391 21.5046 60.1974 24.5 65.0175 24.5C67.3683 24.5 69.1462 23.9679 70.4895 23.2191V19.2778C69.1462 19.9478 67.6054 20.3617 65.6497 20.3617C63.7335 20.3617 62.0346 19.6917 61.8173 17.3663H71.4773C71.4773 17.2578 71.4843 17.0116 71.4925 16.7277L71.4925 16.7267C71.5037 16.3404 71.5168 15.8849 71.5168 15.6125ZM61.7575 13.7403C61.7575 11.5135 63.1206 10.5873 64.3652 10.5873C65.5702 10.5873 66.8542 11.5135 66.8542 13.7403H61.7575ZM33.9435 6.92207H38.902V24.165H33.9435V6.92207ZM28.3144 6.92216L28.6305 8.38043C29.796 6.25215 32.1073 6.68569 32.7395 6.92216V11.4546C32.1271 11.2378 30.1516 10.9619 28.9861 12.4793V24.1651H24.0475V6.92216H28.3144ZM18.7527 2.64569L13.9325 3.67042L13.9128 19.4551C13.9128 22.3717 16.1055 24.5196 19.0292 24.5196C20.6491 24.5196 21.8344 24.2241 22.4863 23.8693V19.869C21.8541 20.1251 18.7329 21.0316 18.7329 18.1151V11.1194H22.4863V6.92195H18.7329L18.7527 2.64569ZM7.07745 10.8632C6.03045 10.8632 5.39831 11.1588 5.39831 11.9273C5.39831 12.7665 6.48624 13.1356 7.83594 13.5935C10.0363 14.3401 12.9323 15.3227 12.9446 18.9625C12.9446 22.4899 10.1197 24.5197 6.0107 24.5197C4.3118 24.5197 2.45487 24.1846 0.617691 23.3964V18.7063C2.27708 19.6128 4.37107 20.2828 6.0107 20.2828C7.11696 20.2828 7.90714 19.9872 7.90714 19.0807C7.90714 18.1512 6.7278 17.7264 5.30401 17.2135C3.13567 16.4323 0.400391 15.447 0.400391 12.1638C0.400391 8.6758 3.06726 6.58694 7.07745 6.58694C8.71708 6.58694 10.337 6.84312 11.9766 7.49343V12.1244C10.4752 11.3164 8.5788 10.8632 7.07745 10.8632Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-[#CCECFF] rounded-[9.84px] w-[127px] h-11 sm:h-[65px]"
+            >
+              <svg
+                class="mx-auto w-1/2 sm:w-full"
+                width="29"
+                height="34"
+                viewBox="0 0 29 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.0178 8.96375C26.0178 9.13915 26.0178 9.31455 25.8424 9.48996C24.4392 16.506 19.8787 18.7862 13.9151 18.7862H10.9332C10.2316 18.7862 9.53002 19.3125 9.53002 20.0141L7.95138 29.8366L7.60059 32.643C7.60059 33.1692 7.95138 33.52 8.30218 33.52H13.7397C14.4413 33.52 14.9675 32.9938 14.9675 32.4676V32.1168L16.0199 25.8023V25.4515C16.1953 24.7499 16.7215 24.3991 17.2477 24.3991H18.1247C23.3868 24.3991 27.421 22.2943 28.4734 16.1552C28.9996 13.5242 28.6488 11.4194 27.421 10.0162C27.0702 9.66536 26.544 9.31455 26.0178 8.96375Z"
+                  fill="#2199D6"
+                />
+                <path
+                  d="M24.6148 8.43746C24.4394 8.43746 24.264 8.26206 23.9132 8.26206C23.7378 8.26206 23.387 8.08665 23.2116 8.08665C22.3346 7.91125 21.4576 7.91125 20.5806 7.91125H12.5121C12.3367 7.91125 12.1613 7.91125 11.9859 8.08665C11.6351 8.26206 11.2843 8.61286 11.2843 8.96366L9.53027 19.8386V20.1894C9.70568 19.4878 10.2319 18.9616 10.9335 18.9616H13.9153C19.879 18.9616 24.4394 16.5059 25.8426 9.66527C25.8426 9.48987 25.8426 9.31447 26.018 9.13907C25.6672 8.96367 25.3164 8.78827 24.9656 8.61287C24.7902 8.43746 24.6148 8.43746 24.6148 8.43746Z"
+                  fill="#252C5E"
+                />
+                <path
+                  d="M11.2849 8.96373C11.2849 8.61293 11.6356 8.26212 11.9864 8.08672C12.1619 8.08672 12.3373 7.91132 12.5127 7.91132H20.5811C21.4581 7.91132 22.5105 7.91132 23.2122 8.08672C23.3876 8.08672 23.7384 8.08672 23.9138 8.26213C24.0892 8.26213 24.2646 8.43753 24.6154 8.43753C24.7908 8.43753 24.7908 8.43753 24.9662 8.61293C25.317 8.78833 25.6678 8.96373 26.0186 9.13914C26.3694 6.50811 26.0186 4.75409 24.6154 3.17547C23.0368 1.42145 20.2303 0.719849 16.7223 0.719849H6.3736C5.67199 0.719849 4.97038 1.24605 4.97038 1.94766L0.760742 28.9595C0.760742 29.4857 1.11155 30.012 1.63775 30.012H7.9522L9.53083 19.8387L11.2849 8.96373Z"
+                  fill="#263577"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-[#FF7E00] rounded-[9.84px] w-[127px] h-11 sm:h-[65px]"
+            >
+              <svg
+                class="mx-auto w-1/2 sm:w-full"
+                width="33"
+                height="34"
+                viewBox="0 0 33 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.2497 15.9381C17.4575 16.3407 20.0857 17.2166 20.6679 15.3879C21.2622 13.5168 18.7016 12.7801 17.4479 12.4194C17.3059 12.3785 17.1805 12.3425 17.0785 12.3101L15.9559 15.8417C16.0401 15.8682 16.1389 15.9012 16.2497 15.9381Z"
+                  fill="white"
+                />
+                <path
+                  d="M14.4963 21.6275C15.9431 22.1071 19.1073 23.1562 19.7475 21.141C20.4026 19.0806 17.3268 18.188 15.8261 17.7525C15.6586 17.7039 15.5103 17.6608 15.3895 17.6226L14.1514 21.5148C14.2504 21.546 14.3666 21.5845 14.4963 21.6275Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M32.9259 18.145C32.3597 27.1844 24.5732 34.0534 15.5342 33.4872C6.49518 32.9211 -0.373396 25.1342 0.192791 16.0947C0.758978 7.05528 8.54552 0.186319 17.5845 0.752479C26.6235 1.31864 33.4921 9.10552 32.9259 18.145ZM20.8723 11.2851C23.0999 12.2095 24.692 13.4845 24.2288 15.6428C23.8916 17.2233 22.9556 17.9393 21.7592 18.1356C23.3248 19.0761 23.7765 20.7032 23.1435 22.5968C21.997 25.3071 19.6697 25.3955 16.6301 24.6237L15.6966 27.5558L13.9216 26.9947L14.8423 24.1018C14.3821 23.9569 13.9122 23.8031 13.4283 23.6403L12.5036 26.5473L10.7307 25.9863L11.6636 23.0479L8.089 21.9076L9.1137 19.9068C9.1137 19.9068 10.4211 20.3411 10.4042 20.3143C10.907 20.4722 11.1548 20.1548 11.2579 19.9404L13.7883 11.9817C13.8348 11.6014 13.7324 11.1122 13.0133 10.8843C13.0423 10.8666 11.7238 10.4778 11.7238 10.4778L12.3237 8.5891L15.9044 9.71437L16.829 6.80938L18.6029 7.37047L17.6974 10.2181C18.1755 10.358 18.6554 10.5 19.1217 10.6474L20.0209 7.81784L21.7959 8.379L20.8723 11.2851Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div
+          id="image"
+          class="lg:w-1/3 w-full hidden md:flex justify-center items-center"
+        >
+          <img src="images/white-big-logo.png" class="max:h-[350px]" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#3B3B3B] mt-20">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="flex sm:justify-center w-full gap-8 flex-wrap">
+            <div class="w-full sm:w-fit">
+              <img src="images/logo.png" class="size-12" alt="" />
+              <p class="text-[#CCCCCC]">
+                PVL Shop - The best place to get online accounts for cheap
+              </p>
+            </div>
+            <div class="w-full sm:w-fit">
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Explore
+              </h2>
+              <ul
+                class="text-gray-500 dark:text-gray-400 font-medium space-y-4"
+              >
+                <li>
+                  <a href="/marketplace.html" class="hover:underline"
+                    >Marketplace</a
+                  >
+                </li>
+                <li class="">
+                  <a href="#" class="hover:underline">How it works?</a>
+                </li>
+
+                <li>
+                  <a href="#" class="hover:underline">Support</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full sm:w-[370px]">
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Join our weekly digest
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline"
+                    >Get exclusive promotions & updates <br />
+                    straight to your inbox.</a
+                  >
+                </li>
+                <li>
+                  <div class="sm:flex sm:relative">
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="Enter your email here"
+                      class="bg-white rounded-[20px] text-black py-3 w-56"
+                    />
+                    <button
+                      class="bg-gradient-to-r from-[#A259FF] to-[#377DF7] hover:from-[#A259FF] hover:to-[#377DF7] text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center justify-center gap-2 sm:w-52 w-56 sm:absolute left-40"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.875 4.375C1.875 4.02982 2.15482 3.75 2.5 3.75H17.5C17.8452 3.75 18.125 4.02982 18.125 4.375V15C18.125 15.3315 17.9933 15.6495 17.7589 15.8839C17.5245 16.1183 17.2065 16.25 16.875 16.25H3.125C2.79348 16.25 2.47554 16.1183 2.24112 15.8839C2.0067 15.6495 1.875 15.3315 1.875 15V4.375ZM3.125 5V15H16.875V5H3.125Z"
+                          fill="white"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.03928 3.95268C2.27253 3.69823 2.66788 3.68104 2.92233 3.91428L10 10.4021L17.0777 3.91428C17.3321 3.68104 17.7275 3.69823 17.9607 3.95268C18.194 4.20713 18.1768 4.60248 17.9223 4.83573L10.4223 11.7107C10.1834 11.9298 9.81663 11.9298 9.57768 11.7107L2.07768 4.83573C1.82323 4.60248 1.80604 4.20713 2.03928 3.95268Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      Subscribe
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >Ⓒ All rights reserved, PVL Shop
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog
+      id="my_modal_1"
+      class="modal sm:w-[500px] py-4 m-auto px-4 rounded-3xl bg-black text-white"
+    >
+      <div class="modal-box flex flex-col items-center justify-center">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      // Function to truncate a string if it exceeds a certain length
+      function truncateString(str, maxLength) {
+        if (str.length > maxLength) {
+          return str.slice(0, maxLength) + "...";
+        } else {
+          return str;
+        }
+      }
+
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      let allProducts = []; // Store all products
+
+      // Make AJAX call to FakeStore API
+      fetch("/products.json")
+        .then((response) => response.json())
+        .then((products) => {
+          console.log(products);
+          const productsContainer = document.getElementById("items");
+
+          allProducts = products; // Store all products
+
+          initialProducts = products.slice(0, 3);
+
+          // Loop through each product
+          initialProducts.forEach((product, index) => {
+            // Truncate the title if it exceeds 20 characters
+            const truncatedTitle = truncateString(product.title, 20);
+
+            // Create product element
+            const productElement = document.createElement("div");
+            productElement.className =
+              "item w-[330px] h-[310px] flex flex-col mx-auto items-center hover:cursor-pointer";
+            // productElement.setAttribute('data-category', product.category)
+            productElement.setAttribute("data-category", product.category);
+            productElement.innerHTML = `
+                    <img src="${product.image}" class="h-48" alt="">
+
+                    <div id="info" class="flex flex-col gap-2">
+                        <h4 class="text-2xl font-semibold">${truncatedTitle}</h4>
+                        <div class="flex items-center">
+                            <img src="images/white-logo.png" alt="">
+                            <p>${truncatedTitle}</p>
+                        </div>
+                        <div id="price" class="flex justify-between">
+                            <div id="months">
+                                <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                                <p>${product.price}</p>
+                            </div>
+                            <div id="months">
+                                <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                                <p class="w-full text-end">${product.price}</p>
+                            </div>
+                        </div>
+                    </div>
+                  `;
+
+            // Add click event listener to open modal
+            productElement.addEventListener("click", () => {
+              console.log("clicked modal");
+              // Set modal content based on the clicked product
+              const modal = document.getElementById("my_modal_1");
+              modal.innerHTML = `
+
+                          <div class="modal-box flex flex-col gap-4 items-center justify-center">
+                            <h3 class="font-bold text-lg">${product.title}</h3>
+                            <img src="${product.image}" alt="${product.title}" class="size-28">
+                            <p class="py-4">Price: ${product.price}</p>
+                            <p>${product.description}</p>
+                            <div class="modal-action">
+                              <form method="dialog">
+                                <button class="btn text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Close</button>
+                              </form>
+                            </div>
+                          </div>
+                        `;
+              modal.showModal(); // Open the modal
+            });
+
+            // Append product element to products container
+            productsContainer.appendChild(productElement);
+          });
+        })
+        .catch((error) => console.error("Error fetching products:", error));
+
+      // Load more products when "Load More" button is clicked
+      loadMoreBtn.addEventListener("click", () => {
+        const remainingProducts = allProducts.slice(3); // Get remaining products
+
+        // Loop through each product
+        remainingProducts.forEach((product, index) => {
+          const productsContainer = document.getElementById("items");
+          // Truncate the title if it exceeds 20 characters
+          const truncatedTitle = truncateString(product.title, 20);
+
+          // Create product element
+          const productElement = document.createElement("div");
+          productElement.className =
+            "item w-[330px] h-[310px] flex flex-col mx-auto items-center hover:cursor-pointer";
+          // productElement.setAttribute('data-category', product.category)
+          productElement.setAttribute("data-category", product.category);
+          productElement.innerHTML = `
+                    <img src="${product.image}" class="h-48" alt="">
+
+                    <div id="info" class="flex flex-col gap-2">
+                        <h4 class="text-2xl font-semibold">${truncatedTitle}</h4>
+                        <div class="flex items-center">
+                            <img src="images/white-logo.png" alt="">
+                            <p>${truncatedTitle}</p>
+                        </div>
+                        <div id="price" class="flex justify-between">
+                            <div id="months">
+                                <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                                <p>${product.price}</p>
+                            </div>
+                            <div id="months">
+                                <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                                <p class="w-full text-end">${product.price}</p>
+                            </div>
+                        </div>
+                    </div>
+                  `;
+
+          // Add click event listener to open modal
+          productElement.addEventListener("click", () => {
+            console.log("clicked modal");
+            // Set modal content based on the clicked product
+            const modal = document.getElementById("my_modal_1");
+            modal.innerHTML = `
+
+                          <div class="modal-box flex flex-col gap-4 items-center justify-center">
+                            <h3 class="font-bold text-lg">${product.title}</h3>
+                            <img src="${product.image}" alt="${product.title}" class="size-28">
+                            <p class="py-4">Price: ${product.price}</p>
+                            <p>${product.description}</p>
+                            <div class="modal-action">
+                              <form method="dialog">
+                                <button class="btn text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Close</button>
+                              </form>
+                            </div>
+                          </div>
+                        `;
+            modal.showModal(); // Open the modal
+          });
+
+          // Append product element to products container
+          productsContainer.appendChild(productElement);
+        });
+        loadMoreBtn.style.display = "none"; // Hide the button after loading all products
+      });
+
+      // Function to filter products based on search query
+      function filterProducts(products, query) {
+        return products.filter((product) =>
+          product.title.toLowerCase().includes(query.toLowerCase())
+        );
+      }
+
+      // Event listener for search input
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          const searchQuery = this.value.trim(); // Get the search query
+          loadMoreBtn.style.display = "none"; // Hide the button after loading all products
+          fetch("/products.json")
+            .then((response) => response.json())
+            .then((products) => {
+              const filteredProducts = filterProducts(products, searchQuery);
+              renderProducts(filteredProducts); // Render filtered products
+            })
+            .catch((error) => console.error("Error fetching products:", error));
+        });
+
+      // Function to render products
+      function renderProducts(products) {
+        const productsContainer = document.getElementById("items");
+        productsContainer.innerHTML = ""; // Clear previous products
+
+        // Loop through each product
+        products.forEach((product, index) => {
+          // Truncate the title if it exceeds 20 characters
+          const truncatedTitle = truncateString(product.title, 20);
+
+          // Create product element
+          const productElement = document.createElement("div");
+          productElement.className =
+            "item w-[330px] h-[310px] flex flex-col mx-auto items-center hover:cursor-pointer";
+          productElement.setAttribute("data-category", "all");
+          productElement.innerHTML = `
+            <img src="${product.image}" class="h-48" alt="">
+            <div id="info" class="flex flex-col gap-2">
+                <h4 class="text-2xl font-semibold">${truncatedTitle}</h4>
+                <div class="flex items-center">
+                    <img src="images/white-logo.png" alt="">
+                    <p>${truncatedTitle}</p>
+                </div>
+                <div id="price" class="flex justify-between">
+                    <div id="months">
+                        <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                        <p>${product.price}</p>
+                    </div>
+                    <div id="months">
+                        <p class="text-xs font-normal text-[#858584]">Price 6 months</p>
+                        <p class="w-full text-end">${product.price}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+          // Add click event listener to open modal
+          productElement.addEventListener("click", () => {
+            console.log("clicked modal");
+            // Set modal content based on the clicked product
+            const modal = document.getElementById("my_modal_1");
+            modal.innerHTML = `
+                <div class="modal-box flex flex-col gap-4 items-center justify-center">
+                    <h3 class="font-bold text-lg">${product.title}</h3>
+                    <img src="${product.image}" alt="${product.title}" class="size-28">
+                    <p class="py-4">Price: ${product.price}</p>
+                    <p>${product.description}</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Close</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+            modal.showModal(); // Open the modal
+          });
+
+          // Append product element to products container
+          productsContainer.appendChild(productElement);
+        });
+      }
+
+      // Function to render products based on category
+      function renderProductsByCategory(products, category) {
+        const filteredProducts =
+          category === "all"
+            ? products
+            : products.filter((product) => product.category === category);
+        renderProducts(filteredProducts); // Render filtered products
+      }
+
+      // Event listener for tab clicks
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          // Remove 'active' class from all tabs
+          document.querySelectorAll(".tab").forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          // Add 'active' class to the clicked tab
+          this.classList.add("active");
+
+          const selectedCategory = this.getAttribute("data-filter"); // Get the category from the tab
+          fetch("/products.json")
+            .then((response) => response.json())
+            .then((products) => {
+              renderProductsByCategory(products, selectedCategory); // Render products based on selected category
+            })
+            .catch((error) => console.error("Error fetching products:", error));
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        const items = document.querySelectorAll(".item");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const filter = tab.dataset.filter;
+
+            // Toggle active class on tabs
+            tabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            // Show/hide items based on filter
+            items.forEach((item) => {
+              if (filter === "all" || item.dataset.category === filter) {
+                item.style.display = "flex";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

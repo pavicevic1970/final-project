@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-[#2B2B2B] text-white">
+    <header>
+      <nav class="bg-white border-gray-200 dark:bg-[#2B2B2B]">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="images/logo.png" class="h-8" alt="Flowbite Logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >PVL Account Shop</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#2B2B2B] md:dark:bg-[#2B2B2B] dark:border-gray-700 items-center"
+            >
+              <li>
+                <a
+                  href="marketplace.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Marketplace</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about-us.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/checkout.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Cart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/login.html"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  <button
+                    class="bg-gradient-to-r from-[#A259FF] to-[#FF6250] hover:from-pink-500 hover:to-orange-500 text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center gap-2"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10 3.125C7.58375 3.125 5.625 5.08375 5.625 7.5C5.625 9.91625 7.58375 11.875 10 11.875C12.4162 11.875 14.375 9.91625 14.375 7.5C14.375 5.08375 12.4162 3.125 10 3.125ZM4.375 7.5C4.375 4.3934 6.8934 1.875 10 1.875C13.1066 1.875 15.625 4.3934 15.625 7.5C15.625 10.6066 13.1066 13.125 10 13.125C6.8934 13.125 4.375 10.6066 4.375 7.5Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.99998 13.1244C8.57362 13.1244 7.17239 13.4999 5.93716 14.2131C4.70193 14.9264 3.67622 15.9522 2.96315 17.1875C2.79059 17.4865 2.40836 17.5889 2.10941 17.4164C1.81046 17.2438 1.708 16.8616 1.88056 16.5626C2.70333 15.1373 3.88684 13.9536 5.31211 13.1306C6.73738 12.3077 8.35418 11.8744 9.99998 11.8744C11.6458 11.8744 13.2626 12.3077 14.6879 13.1306C16.1131 13.9536 17.2966 15.1373 18.1194 16.5626C18.292 16.8616 18.1895 17.2438 17.8906 17.4164C17.5916 17.5889 17.2094 17.4865 17.0368 17.1875C16.3237 15.9522 15.298 14.9264 14.0628 14.2131C12.8276 13.4999 11.4263 13.1244 9.99998 13.1244Z"
+                        fill="white"
+                      />
+                    </svg>
+                    Log in
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="md:px-40 sm:px-20 px-4 py-5 mx-auto">
+      <div id="hero" class="flex w-full flex-wrap">
+        <div
+          id="left"
+          class="sm:w-1/2 w-full sm:items-start items-center flex flex-col gap-6"
+        >
+          <div id="top">
+            <h2 class="lg:text-[67px] text-3xl text-white leading-tight">
+              Discover & Buy <br />
+              Digital <br />
+              Accounts
+            </h2>
+            <p class="lg:text-2xl text-base font-thin text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              euismod sodales neque et porta. Donec ut diam dignissim
+            </p>
+          </div>
+
+          <a href="login.html">
+            <button
+              class="bg-gradient-to-r from-[#A259FF] to-[#377DF7] hover:from-[#A259FF] hover:to-[#377DF7] text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center justify-center gap-2 w-52"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 3.125C7.58375 3.125 5.625 5.08375 5.625 7.5C5.625 9.91625 7.58375 11.875 10 11.875C12.4162 11.875 14.375 9.91625 14.375 7.5C14.375 5.08375 12.4162 3.125 10 3.125ZM4.375 7.5C4.375 4.3934 6.8934 1.875 10 1.875C13.1066 1.875 15.625 4.3934 15.625 7.5C15.625 10.6066 13.1066 13.125 10 13.125C6.8934 13.125 4.375 10.6066 4.375 7.5Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.99998 13.1244C8.57362 13.1244 7.17239 13.4999 5.93716 14.2131C4.70193 14.9264 3.67622 15.9522 2.96315 17.1875C2.79059 17.4865 2.40836 17.5889 2.10941 17.4164C1.81046 17.2438 1.708 16.8616 1.88056 16.5626C2.70333 15.1373 3.88684 13.9536 5.31211 13.1306C6.73738 12.3077 8.35418 11.8744 9.99998 11.8744C11.6458 11.8744 13.2626 12.3077 14.6879 13.1306C16.1131 13.9536 17.2966 15.1373 18.1194 16.5626C18.292 16.8616 18.1895 17.2438 17.8906 17.4164C17.5916 17.5889 17.2094 17.4865 17.0368 17.1875C16.3237 15.9522 15.298 14.9264 14.0628 14.2131C12.8276 13.4999 11.4263 13.1244 9.99998 13.1244Z"
+                  fill="white"
+                />
+              </svg>
+              Get Started
+            </button>
+          </a>
+
+          <div
+            id="bottom"
+            class="flex sm:justify-start justify-center w-full gap-10"
+          >
+            <div class="flex flex-col gap-2">
+              <h4 class="text-3xl font-bold text-white">240k+</h4>
+              <p class="text-2xl font-normal">Total Sale</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h4 class="text-3xl font-bold text-white">240k+</h4>
+              <p class="text-2xl font-normal">Total Sale</p>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-1/2 w-full">
+          <img
+            src="images/hero.png"
+            class="lg:max-w-full max-w-80 mx-auto"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="selling" class="py-20">
+        <div class="flex justify-between w-full items-end">
+          <div class="flex flex-col gap-4">
+            <h3 class="text-4xl font-semibold">Top Selling</h3>
+            <p class="text-xl font-normal">
+              Check out OUR best selling accounts
+            </p>
+          </div>
+
+          <a href="marketplace.html">
+            <button
+              class="text-white font-bold py-1 px-6 rounded-[20px] shadow-md items-center gap-2 border-[#A259FF] border-solid border-2 h-[60px] sm:flex hidden"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.17053 12.4491C6.28055 12.7763 6.10451 13.1307 5.77734 13.2407C4.71792 13.597 4.15489 14.4863 3.85373 15.3907C3.73414 15.7498 3.66189 16.0955 3.61848 16.3814C3.90434 16.338 4.25006 16.2657 4.60917 16.1461C5.51355 15.845 6.4029 15.2819 6.75916 14.2225C6.86918 13.8954 7.2236 13.7193 7.55078 13.8293C7.87795 13.9394 8.05399 14.2938 7.94396 14.621C7.4096 16.21 6.08801 16.9712 5.00411 17.3321C4.45655 17.5144 3.94395 17.6045 3.5698 17.6493C3.38182 17.6719 3.22641 17.6833 3.116 17.6891C3.06074 17.6921 3.01658 17.6936 2.98505 17.6943C2.96928 17.6947 2.95666 17.6949 2.94737 17.6951L2.93596 17.6952L2.93217 17.6952L2.93077 17.6952L2.93019 17.6952C2.92993 17.6952 2.92969 17.6952 2.92969 17.0702C2.30469 17.0702 2.30469 17.0699 2.30469 17.0697L2.30469 17.0691L2.30469 17.0677L2.30471 17.0639L2.30481 17.0525C2.30493 17.0432 2.30514 17.0306 2.30553 17.0148C2.30631 16.9833 2.30782 16.9391 2.31072 16.8839C2.31653 16.7735 2.32797 16.618 2.35052 16.4301C2.3954 16.0559 2.48542 15.5433 2.66776 14.9958C3.0287 13.9119 3.78989 12.5903 5.37891 12.0559C5.70608 11.9459 6.0605 12.1219 6.17053 12.4491ZM2.92969 17.0702H2.30469C2.30469 17.4154 2.58451 17.6952 2.92969 17.6952V17.0702Z"
+                  fill="#A259FF"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.5462 3.454C15.8207 3.34937 14.035 3.30996 12.2075 5.13747L7.34476 10.0002L9.99994 12.6554L14.8627 7.79265C16.6902 5.96514 16.6508 4.17945 16.5462 3.454ZM16.7274 2.21721C15.7297 2.07276 13.5057 2.07151 11.3236 4.25359L6.01893 9.55827C5.90172 9.67548 5.83588 9.83446 5.83588 10.0002C5.83588 10.166 5.90172 10.3249 6.01893 10.4422L9.558 13.9812C9.80208 14.2253 10.1978 14.2253 10.4419 13.9812L15.7466 8.67653C17.9286 6.49445 17.9274 4.27046 17.7829 3.27276C17.7464 3.00574 17.6234 2.75797 17.4328 2.56734C17.2422 2.37671 16.9944 2.25376 16.7274 2.21721Z"
+                  fill="#A259FF"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.4219 8.49243C14.7671 8.49243 15.0469 8.77225 15.0469 9.11743V14.1643L15.0468 14.1732C15.0421 14.5015 14.9085 14.8147 14.6749 15.0452L12.1526 17.5753C11.9925 17.7352 11.792 17.8486 11.5724 17.9035C11.3529 17.9584 11.1225 17.9527 10.906 17.8869C10.6895 17.8212 10.4948 17.6978 10.3429 17.5301C10.1911 17.3625 10.0875 17.1569 10.0433 16.9351C10.0433 16.935 10.0434 16.9353 10.0433 16.9351L9.38719 13.6622C9.31934 13.3237 9.5387 12.9944 9.87714 12.9265C10.2156 12.8587 10.545 13.078 10.6128 13.4165L11.2692 16.6909L13.7969 14.1554V9.11743C13.7969 8.77225 14.0767 8.49243 14.4219 8.49243Z"
+                  fill="#A259FF"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.82698 4.95307L5.83588 4.953H10.8828C11.2279 4.953 11.5078 5.23282 11.5078 5.578C11.5078 5.92318 11.2279 6.203 10.8828 6.203H5.84472L5.83967 6.20816L5.83964 6.20813L3.30933 8.73063L3.3103 8.73082L6.58373 9.38707C6.92218 9.45492 7.14154 9.78429 7.07369 10.1227C7.00584 10.4612 6.67647 10.6805 6.33803 10.6127L3.06556 9.95663C3.06537 9.95659 3.06518 9.95655 3.065 9.95652C2.84325 9.91232 2.63764 9.8088 2.47006 9.65699C2.30235 9.50504 2.17903 9.31042 2.11327 9.09387C2.04751 8.87733 2.04176 8.647 2.09665 8.42745C2.15154 8.2079 2.265 8.00737 2.42493 7.84725L2.42587 7.84631L2.42587 7.84632L4.95498 5.32502C5.18549 5.09139 5.49869 4.95774 5.82698 4.95307Z"
+                  fill="#A259FF"
+                />
+              </svg>
+
+              Explore More
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        id="products"
+        class="flex flex-wrap justify-center md:justify-start gap-4"
+      ></div>
+
+      <button
+        class="text-white font-bold py-1 px-6 rounded-[20px] shadow-md items-center gap-2 border-[#A259FF] border-solid border-2 h-[60px] sm:hidden flex mx-auto mt-4"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.17053 12.4491C6.28055 12.7763 6.10451 13.1307 5.77734 13.2407C4.71792 13.597 4.15489 14.4863 3.85373 15.3907C3.73414 15.7498 3.66189 16.0955 3.61848 16.3814C3.90434 16.338 4.25006 16.2657 4.60917 16.1461C5.51355 15.845 6.4029 15.2819 6.75916 14.2225C6.86918 13.8954 7.2236 13.7193 7.55078 13.8293C7.87795 13.9394 8.05399 14.2938 7.94396 14.621C7.4096 16.21 6.08801 16.9712 5.00411 17.3321C4.45655 17.5144 3.94395 17.6045 3.5698 17.6493C3.38182 17.6719 3.22641 17.6833 3.116 17.6891C3.06074 17.6921 3.01658 17.6936 2.98505 17.6943C2.96928 17.6947 2.95666 17.6949 2.94737 17.6951L2.93596 17.6952L2.93217 17.6952L2.93077 17.6952L2.93019 17.6952C2.92993 17.6952 2.92969 17.6952 2.92969 17.0702C2.30469 17.0702 2.30469 17.0699 2.30469 17.0697L2.30469 17.0691L2.30469 17.0677L2.30471 17.0639L2.30481 17.0525C2.30493 17.0432 2.30514 17.0306 2.30553 17.0148C2.30631 16.9833 2.30782 16.9391 2.31072 16.8839C2.31653 16.7735 2.32797 16.618 2.35052 16.4301C2.3954 16.0559 2.48542 15.5433 2.66776 14.9958C3.0287 13.9119 3.78989 12.5903 5.37891 12.0559C5.70608 11.9459 6.0605 12.1219 6.17053 12.4491ZM2.92969 17.0702H2.30469C2.30469 17.4154 2.58451 17.6952 2.92969 17.6952V17.0702Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.5462 3.454C15.8207 3.34937 14.035 3.30996 12.2075 5.13747L7.34476 10.0002L9.99994 12.6554L14.8627 7.79265C16.6902 5.96514 16.6508 4.17945 16.5462 3.454ZM16.7274 2.21721C15.7297 2.07276 13.5057 2.07151 11.3236 4.25359L6.01893 9.55827C5.90172 9.67548 5.83588 9.83446 5.83588 10.0002C5.83588 10.166 5.90172 10.3249 6.01893 10.4422L9.558 13.9812C9.80208 14.2253 10.1978 14.2253 10.4419 13.9812L15.7466 8.67653C17.9286 6.49445 17.9274 4.27046 17.7829 3.27276C17.7464 3.00574 17.6234 2.75797 17.4328 2.56734C17.2422 2.37671 16.9944 2.25376 16.7274 2.21721Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.4219 8.49243C14.7671 8.49243 15.0469 8.77225 15.0469 9.11743V14.1643L15.0468 14.1732C15.0421 14.5015 14.9085 14.8147 14.6749 15.0452L12.1526 17.5753C11.9925 17.7352 11.792 17.8486 11.5724 17.9035C11.3529 17.9584 11.1225 17.9527 10.906 17.8869C10.6895 17.8212 10.4948 17.6978 10.3429 17.5301C10.1911 17.3625 10.0875 17.1569 10.0433 16.9351C10.0433 16.935 10.0434 16.9353 10.0433 16.9351L9.38719 13.6622C9.31934 13.3237 9.5387 12.9944 9.87714 12.9265C10.2156 12.8587 10.545 13.078 10.6128 13.4165L11.2692 16.6909L13.7969 14.1554V9.11743C13.7969 8.77225 14.0767 8.49243 14.4219 8.49243Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.82698 4.95307L5.83588 4.953H10.8828C11.2279 4.953 11.5078 5.23282 11.5078 5.578C11.5078 5.92318 11.2279 6.203 10.8828 6.203H5.84472L5.83967 6.20816L5.83964 6.20813L3.30933 8.73063L3.3103 8.73082L6.58373 9.38707C6.92218 9.45492 7.14154 9.78429 7.07369 10.1227C7.00584 10.4612 6.67647 10.6805 6.33803 10.6127L3.06556 9.95663C3.06537 9.95659 3.06518 9.95655 3.065 9.95652C2.84325 9.91232 2.63764 9.8088 2.47006 9.65699C2.30235 9.50504 2.17903 9.31042 2.11327 9.09387C2.04751 8.87733 2.04176 8.647 2.09665 8.42745C2.15154 8.2079 2.265 8.00737 2.42493 7.84725L2.42587 7.84631L2.42587 7.84632L4.95498 5.32502C5.18549 5.09139 5.49869 4.95774 5.82698 4.95307Z"
+            fill="#A259FF"
+          />
+        </svg>
+
+        Explore More
+      </button>
+    </main>
+
+    <div id="sale" class="relative w-full h-[500px]">
+      <div
+        class="absolute inset-0 bg-[url('/images/bg-home.png')] bg-center bg-cover"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#5a5462] opacity-50"
+      ></div>
+      <!-- Content Goes Here -->
+      <div
+        class="flex flex-wrap sm:flex-nowrap md:px-40 sm:px-20 px-4 mx-auto h-full w-full items-end pb-5 justify-between absolute z-10"
+      >
+        <div id="left" class="flex flex-col gap-4">
+          <p class="text-base px-4 py-2 w-fit bg-[#3B3B3B] rounded-[20px]">
+            Trusted Seller
+          </p>
+          <h4 class="text-5xl font-semibold">10% off sale</h4>
+          <a href="marketplace.html">
+            <button
+              class="text-black font-bold py-1 px-6 rounded-[20px] shadow-md flex items-center gap-2 border-[#A259FF] border-solid border-2 h-[60px] bg-white w-fit"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.83931 6.74556C4.3292 5.25567 6.66714 3.75 10 3.75C13.3329 3.75 15.6708 5.25567 17.1607 6.74556C17.9038 7.4887 18.4397 8.23076 18.7906 8.78809C18.9664 9.06724 19.0966 9.30146 19.184 9.4683C19.2277 9.55176 19.2608 9.61849 19.2835 9.66569C19.2949 9.6893 19.3037 9.70804 19.3099 9.72157L19.3174 9.7379L19.3197 9.74306L19.3206 9.74487L19.3209 9.74558C19.321 9.74588 19.3211 9.74616 18.75 10C19.3211 10.2538 19.321 10.2541 19.3209 10.2544L19.3206 10.2551L19.3197 10.2569L19.3174 10.2621L19.3099 10.2784C19.3037 10.292 19.2949 10.3107 19.2835 10.3343C19.2608 10.3815 19.2277 10.4482 19.184 10.5317C19.0966 10.6985 18.9664 10.9328 18.7906 11.2119C18.4397 11.7692 17.9038 12.5113 17.1607 13.2544C15.6708 14.7443 13.3329 16.25 10 16.25C6.66714 16.25 4.3292 14.7443 2.83931 13.2544C2.09617 12.5113 1.5603 11.7692 1.20939 11.2119C1.03362 10.9328 0.903373 10.6985 0.815984 10.5317C0.772267 10.4482 0.739205 10.3815 0.716476 10.3343C0.705109 10.3107 0.696319 10.292 0.690066 10.2784L0.682582 10.2621L0.680256 10.2569L0.679445 10.2551L0.679127 10.2544C0.678993 10.2541 0.678868 10.2538 1.25 10C0.678868 9.74616 0.678993 9.74588 0.679127 9.74558L0.679445 9.74487L0.680256 9.74306L0.682582 9.7379L0.690066 9.72157C0.696319 9.70804 0.705109 9.6893 0.716476 9.66569C0.739205 9.61849 0.772267 9.55176 0.815984 9.4683C0.903373 9.30146 1.03362 9.06724 1.20939 8.78809C1.5603 8.23076 2.09617 7.4887 2.83931 6.74556ZM1.25 10L0.678868 9.74616C0.607044 9.90777 0.607044 10.0922 0.678868 10.2538L1.25 10ZM1.94882 10C2.02235 10.1377 2.12794 10.3248 2.26718 10.5459C2.58033 11.0433 3.06008 11.7074 3.72319 12.3706C5.0458 13.6932 7.08286 15 10 15C12.9171 15 14.9542 13.6932 16.2768 12.3706C16.9399 11.7074 17.4197 11.0433 17.7328 10.5459C17.8721 10.3248 17.9777 10.1377 18.0512 10C17.9777 9.86227 17.8721 9.67524 17.7328 9.4541C17.4197 8.95674 16.9399 8.29255 16.2768 7.62944C14.9542 6.30683 12.9171 5 10 5C7.08286 5 5.0458 6.30683 3.72319 7.62944C3.06008 8.29255 2.58033 8.95674 2.26718 9.4541C2.12794 9.67524 2.02235 9.86227 1.94882 10ZM18.75 10L19.3211 10.2538C19.393 10.0922 19.393 9.90777 19.3211 9.74616L18.75 10Z"
+                  fill="#A259FF"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5ZM6.25 10C6.25 7.92893 7.92893 6.25 10 6.25C12.0711 6.25 13.75 7.92893 13.75 10C13.75 12.0711 12.0711 13.75 10 13.75C7.92893 13.75 6.25 12.0711 6.25 10Z"
+                  fill="#A259FF"
+                />
+              </svg>
+
+              Shop now
+            </button>
+          </a>
+        </div>
+
+        <div
+          id="right"
+          class="w-[295px] h-[147px] flex flex-col px-8 rounded-3xl gap-4 justify-center"
+          style="background-color: rgba(59, 59, 59, 0.5)"
+        >
+          <p id="sale-message" class="text-xs font-normal">Sale ends in:</p>
+          <div id="time" class="flex gap-4">
+            <div id="hours">
+              <h3 id="hours-value" class="text-4xl font-bold">59</h3>
+              <p id="hours-label" class="text-xs font-normal">Hours</p>
+            </div>
+            <p class="text-3xl font-bold">:</p>
+            <div id="minutes">
+              <h3 id="minutes-value" class="text-4xl font-bold">59</h3>
+              <p id="minutes-label" class="text-xs font-normal">Minutes</p>
+            </div>
+            <p class="text-3xl font-bold">:</p>
+            <div id="seconds">
+              <h3 id="seconds-value" class="text-4xl font-bold">59</h3>
+              <p id="seconds-label" class="text-xs font-normal">Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:px-40 sm:px-20 px-4">
+      <div id="work" class="py-5">
+        <div id="top" class="w-fit mx-auto sm:m-0">
+          <h3 class="text-4xl font-semibold">How it works</h3>
+          <p class="text-xl font-normal">Find out how to get started</p>
+        </div>
+
+        <div id="works" class="pt-5 flex flex-wrap gap-4 justify-center">
+          <div
+            id="1"
+            class="w-[330px] h-[373px] bg-[#3B3B3B] flex flex-col items-center justify-evenly rounded-[20px] relative"
+          >
+            <img src="images/works1.png" class="size-60" alt="" />
+            <div id="info" class="flex flex-col justify-center items-center">
+              <h4 class="text-xl font-semibold">Register to PVL</h4>
+              <p class="text-base">Register or log in into PVL Shop</p>
+            </div>
+          </div>
+          <div
+            id="1"
+            class="w-[330px] h-[373px] bg-[#3B3B3B] flex flex-col items-center justify-evenly rounded-[20px] relative"
+          >
+            <img src="images/works1.png" class="size-60" alt="" />
+            <div id="info" class="flex flex-col justify-center items-center">
+              <h4 class="text-xl font-semibold">Register to PVL</h4>
+              <p class="text-base">Register or log in into PVL Shop</p>
+            </div>
+          </div>
+          <div
+            id="1"
+            class="w-[330px] h-[373px] bg-[#3B3B3B] flex flex-col items-center justify-evenly rounded-[20px] relative"
+          >
+            <img src="images/works1.png" class="size-60" alt="" />
+            <div id="info" class="flex flex-col justify-center items-center">
+              <h4 class="text-xl font-semibold">Register to PVL</h4>
+              <p class="text-base">Register or log in into PVL Shop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="join"
+        class="flex flex-wrap lg:flex-nowrap bg-[#3B3B3B] w-full lg:h-[430px] h-fit items-center justify-around rounded-3xl py-4 gap-3"
+      >
+        <!-- <div class="bg-[url('/images/bg-home.png')] w-[425px] h-[310px] bg-contain bg-no-repeat"></div> -->
+        <img
+          src="images/bg-home.png"
+          class="xl:w-[425px] h-[310px] rounded-3xl"
+          alt=""
+        />
+
+        <div id="left" class="md:w-1/2 sm:w-3/4 w-full flex flex-col gap-6">
+          <div id="top">
+            <h2 class="xl:text-[38px] text-[28px] text-white leading-tight">
+              Join our weekly<br />
+              digest
+            </h2>
+            <p class="xl:text-2xl text-base font-thin text-white">
+              Get exclusive promotions & updates straight to your inbox.
+            </p>
+          </div>
+
+          <div
+            class="flex xl:flex-row flex-col items-center xl:relative xl:gap-0 gap-4"
+          >
+            <input
+              type="email"
+              name=""
+              id=""
+              class="bg-white w-4/6 xl:w-fit rounded-[20px] text-black py-3"
+            />
+            <button
+              class="bg-gradient-to-r from-[#A259FF] to-[#377DF7] hover:from-[#A259FF] hover:to-[#377DF7] text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center justify-center gap-2 xl:w-52 xl:absolute left-36 w-4/6"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.875 4.375C1.875 4.02982 2.15482 3.75 2.5 3.75H17.5C17.8452 3.75 18.125 4.02982 18.125 4.375V15C18.125 15.3315 17.9933 15.6495 17.7589 15.8839C17.5245 16.1183 17.2065 16.25 16.875 16.25H3.125C2.79348 16.25 2.47554 16.1183 2.24112 15.8839C2.0067 15.6495 1.875 15.3315 1.875 15V4.375ZM3.125 5V15H16.875V5H3.125Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.03928 3.95268C2.27253 3.69823 2.66788 3.68104 2.92233 3.91428L10 10.4021L17.0777 3.91428C17.3321 3.68104 17.7275 3.69823 17.9607 3.95268C18.194 4.20713 18.1768 4.60248 17.9223 4.83573L10.4223 11.7107C10.1834 11.9298 9.81663 11.9298 9.57768 11.7107L2.07768 4.83573C1.82323 4.60248 1.80604 4.20713 2.03928 3.95268Z"
+                  fill="white"
+                />
+              </svg>
+
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#3B3B3B] mt-20">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="flex sm:justify-center w-full gap-8 flex-wrap">
+            <div class="w-full sm:w-fit">
+              <img src="images/logo.png" class="size-12" alt="" />
+              <p class="text-[#CCCCCC]">
+                PVL Shop - The best place to get online accounts for cheap
+              </p>
+            </div>
+            <div class="w-full sm:w-fit">
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Explore
+              </h2>
+              <ul
+                class="text-gray-500 dark:text-gray-400 font-medium space-y-4"
+              >
+                <li>
+                  <a href="/marketplace.html" class="hover:underline"
+                    >Marketplace</a
+                  >
+                </li>
+                <li class="">
+                  <a href="#" class="hover:underline">How it works?</a>
+                </li>
+
+                <li>
+                  <a href="#" class="hover:underline">Support</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full sm:w-[370px]">
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Join our weekly digest
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline"
+                    >Get exclusive promotions & updates <br />
+                    straight to your inbox.</a
+                  >
+                </li>
+                <li>
+                  <div class="sm:flex sm:relative">
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="Enter your email here"
+                      class="bg-white rounded-[20px] text-black py-3 w-56"
+                    />
+                    <button
+                      class="bg-gradient-to-r from-[#A259FF] to-[#377DF7] hover:from-[#A259FF] hover:to-[#377DF7] text-white font-bold py-3 px-8 rounded-[20px] shadow-md flex items-center justify-center gap-2 sm:w-52 w-56 sm:absolute left-40"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.875 4.375C1.875 4.02982 2.15482 3.75 2.5 3.75H17.5C17.8452 3.75 18.125 4.02982 18.125 4.375V15C18.125 15.3315 17.9933 15.6495 17.7589 15.8839C17.5245 16.1183 17.2065 16.25 16.875 16.25H3.125C2.79348 16.25 2.47554 16.1183 2.24112 15.8839C2.0067 15.6495 1.875 15.3315 1.875 15V4.375ZM3.125 5V15H16.875V5H3.125Z"
+                          fill="white"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.03928 3.95268C2.27253 3.69823 2.66788 3.68104 2.92233 3.91428L10 10.4021L17.0777 3.91428C17.3321 3.68104 17.7275 3.69823 17.9607 3.95268C18.194 4.20713 18.1768 4.60248 17.9223 4.83573L10.4223 11.7107C10.1834 11.9298 9.81663 11.9298 9.57768 11.7107L2.07768 4.83573C1.82323 4.60248 1.80604 4.20713 2.03928 3.95268Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      Subscribe
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >Ⓒ All rights reserved, PVL Shop
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog
+      id="my_modal_1"
+      class="modal sm:w-[500px] py-4 px-4 rounded-3xl bg-black text-white"
+    >
+      <div class="modal-box flex flex-col items-center justify-center">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      // Function to truncate a string if it exceeds a certain length
+      function truncateString(str, maxLength) {
+        if (str.length > maxLength) {
+          return str.slice(0, maxLength) + "...";
+        } else {
+          return str;
+        }
+      }
+
+      // Make AJAX call to FakeStore API
+      fetch("/products.json")
+        .then((response) => response.json())
+        .then((products) => {
+          const productsContainer = document.getElementById("products");
+
+          initialProducts = products.slice(0, 3);
+
+          // Loop through each product
+          initialProducts.forEach((product, index) => {
+            // Truncate the title if it exceeds 20 characters
+            const truncatedTitle = truncateString(product.title, 20);
+
+            // Create product element
+            const productElement = document.createElement("div");
+            productElement.className =
+              "w-60 h-60 bg-[#3B3B3B] flex flex-col items-center justify-evenly rounded-[20px] relative hover:cursor-pointer";
+            productElement.innerHTML = `
+                      <p class="absolute bg-[#2B2B2B] rounded-full w-7 h-7 text-center left-4 top-3">${
+                        index + 1
+                      }</p>
+                      <img src="${product.image}" class="size-28" alt="${
+              product.title
+            }">
+                      <div class="flex flex-col justify-center items-center">
+                          <h4 class="text-xl font-semibold">${truncatedTitle}</h4>
+                          <p class="text-base"><span class="text-[#858584]">From: </span>${
+                            product.price
+                          }</p>
+                      </div>
+                  `;
+
+            // Add click event listener to open modal
+            productElement.addEventListener("click", () => {
+              console.log("clicked modal");
+              // Set modal content based on the clicked product
+              const modal = document.getElementById("my_modal_1");
+              modal.innerHTML = `
+
+                          <div class="modal-box flex flex-col gap-4 items-center justify-center">
+                            <h3 class="font-bold text-lg">${product.title}</h3>
+                            <img src="${product.image}" alt="${product.title}" class="size-28">
+                            <p class="py-4">Price: ${product.price}</p>
+                            <p>${product.description}</p>
+                            <div class="modal-action">
+                              <form method="dialog">
+                                <button class="btn text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Close</button>
+                              </form>
+                            </div>
+                          </div>
+                        `;
+              modal.showModal(); // Open the modal
+            });
+
+            // Append product element to products container
+            productsContainer.appendChild(productElement);
+          });
+        })
+        .catch((error) => console.error("Error fetching products:", error));
+
+      //Makes countdown
+      const saleEndDate = new Date("2023-01-01T00:00:00");
+      const saleEndTime = saleEndDate.getTime();
+      let countdownInterval;
+
+      function updateCountdown() {
+        const now = new Date();
+        const currentTime = now.getTime();
+        const timeLeft = saleEndTime - currentTime;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          return;
+        }
+
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60)) % 24;
+        const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+        const seconds = Math.floor((timeLeft / 1000) % 60);
+
+        document.getElementById("hours-value").textContent = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes-value").textContent = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds-value").textContent = seconds
+          .toString()
+          .padStart(2, "0");
+      }
+
+      countdownInterval = setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
+</html>
